@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: rgba(255, 255, 255, 0.5);
+    --brdr: 1px solid rgb(170, 170, 170);
+    --color: rgb(0, 0, 94);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====Button==== */
+
+.view-btn,
+.back-btn {
+    text-decoration: none;
+    background: rgb(0, 0, 117);
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.submit-btn,
+.pwdcng-btn {
+    cursor: pointer;
+    width: unset !important;
+    padding: 10px 15px !important;
+    font-weight: bold;
+    background: rgb(5, 88, 197) !important;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    font-size: 16px;
+}
+
+.pwdcng-btn {
+    background: rgb(1, 136, 129) !important;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.pwdcng-btn:hover {
+    background: rgb(0, 175, 166) !important;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg01.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--bg);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--color);
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+.form-body {
+    margin: 10px auto;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.body-head {
+    background: var(--bg);
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-form {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+}
+
+.register-form label {
+    font-weight: bold;
+    color: #fff;
+}
+
+.register-form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background: rgb(0, 74, 170) !important;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    background: var(--bg);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.user-list-tbl {
+    width: 98%;
+    margin: auto;
+    padding: 20px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    color: rgb(235, 235, 235);
+}
+
+.user-list-tbl tr:nth-child(even) {
+    background-color: rgba(151, 151, 151, 0.5);
+}
+
+.user-list-tbl tr:nth-child(odd) {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+.user-list-tbl tr,
+.user-list-tbl th,
+.user-list-tbl td {
+    border: 1px solid #fff;
+    padding: 10px 5px;
+}
+
+.user-list-tbl th {
+    background: rgba(216, 216, 216, 0.5);
+    color: black;
+}
+
+
+/* ===== PHP Form Validation ===== */
+
+.error-msg,
+.succ-msg {
+    padding: 15px 10px;
+    background: rgba(255, 0, 0, 0.404);
+    margin: 10px auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    color: #fff;
+}
+
+.succ-msg {
+    background: rgba(3, 110, 17, 0.404) !important;
+}
+
+
+/* ======Responsive====== */
+
+@media screen and (max-width: 1100px) {
+    .register-form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register-form {
+        width: 80%;
+    }
+    .form-footer {
+        flex-direction: column;
+    }
+}
